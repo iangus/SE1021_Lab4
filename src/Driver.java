@@ -1,3 +1,5 @@
+import edu.msoe.se1021.lab4.WavPlayer;
+
 /**
  * SE1021 - 032
  * Winter 2016
@@ -7,13 +9,12 @@
  */
 public class Driver {
     public static void main(String[] args) {
-        Horse test = new Horse();
-        System.out.println(test.toString());
-        Chicken test2 = new Chicken("egg layer");
-        System.out.println(test2.toString());
-        Gold test3 = new Gold(0.5);
-        System.out.println(test3.toString());
-        Silver test4 = new Silver(1.0);
-        System.out.println(test4.toString());
+        Portfolio items = new Portfolio();
+        items.addHorses(4);
+        items.addChickens(3, "broiler");
+        items.addChickens(2, "egg layer");
+        items.addGold(4, 0.5);
+        items.addSilver(6, 1.0);
+        items.printItems();
     }
 }
