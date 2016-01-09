@@ -60,7 +60,7 @@ public class MetalsPricing {
     }
 
     /**
-     * Returns the current price for one once of gold in USD
+     * Returns the current price for one ounce of gold in USD
      * @return current price of gold
      */
     public static double getGoldPrice() {

@@ -12,7 +12,9 @@ public abstract class FarmItems implements Valuable {
     protected double value;
     private static final DecimalFormat valueWeightFormat = new DecimalFormat("#,###.00");
 
-    public abstract void setWeight();
+    public void setWeight(double weight){
+        this.weight = weight;
+    }
 
     public String getWeight(){
         return valueWeightFormat.format(weight);
