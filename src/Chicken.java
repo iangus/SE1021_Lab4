@@ -1,4 +1,4 @@
-import java.util.Random;
+
 
 /**
  * SE1021 - 032
@@ -7,30 +7,19 @@ import java.util.Random;
  * Name: Ian Guswiler
  * Created: 1/9/2016
  */
-public class Chicken extends FarmItems {
-    private int age;
+public class Chicken extends Animal {
     private static final int MAX_AGE = 8;
     private static final int MIN_AGE = 0;
     private static final double MAX_WEIGHT = 6.5;
     private static final double MIN_WEIGHT = 2.5;
-    private static final Random generator = new Random();
     private final String type;
 
     public Chicken(String type){
+        super(MAX_AGE, MIN_AGE, MAX_WEIGHT, MIN_WEIGHT);
         this.type = type;
-        setAge();
-        setWeight();
         setValue(calculateValue());
     }
 
-
-    public void setAge(){
-        age = generator.nextInt(MAX_AGE - 1) + MIN_AGE;
-    }
-
-    public void setWeight(){
-        weight = MIN_WEIGHT + (generator.nextDouble() * (MAX_WEIGHT - MIN_WEIGHT));
-    }
 
     public double calculateValue(){
         double calculatedValue;

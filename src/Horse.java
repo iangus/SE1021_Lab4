@@ -1,4 +1,4 @@
-import java.util.Random;
+
 
 /**
  * SE1021 - 032
@@ -9,21 +9,11 @@ import java.util.Random;
  */
 
 
-public class Horse extends FarmItems {
-    private int age;
+public class Horse extends Animal {
     private static final int MAX_AGE = 25;
     private static final int MIN_AGE = 2;
     private static final double MAX_WEIGHT = 1500;
     private static final double MIN_WEIGHT = 500;
-    private static final Random generator = new Random();
-
-    public void setAge(){
-        age = generator.nextInt(MAX_AGE - 1) + MIN_AGE;
-    }
-
-    public void setWeight(){
-        weight = MIN_WEIGHT + (generator.nextDouble() * (MAX_WEIGHT - MIN_WEIGHT));
-    }
 
     public double calculateValue(){
         double calculatedValue;
@@ -37,8 +27,7 @@ public class Horse extends FarmItems {
     }
 
     public Horse(){
-        setWeight();
-        setAge();
+        super(MAX_AGE, MIN_AGE, MAX_WEIGHT, MIN_WEIGHT);
         setValue(calculateValue());
     }
 
